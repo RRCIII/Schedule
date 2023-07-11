@@ -36,15 +36,24 @@ const dtHeader = () => {
 const saveBtn  = () => {
   $('.btn').on('click', function (){
       const key = $(this).parent().attr('id');
-      const value = $(this).siblings('textarea').val();
+      const value = $(this).siblings('textarea').val(); // input from user
 
       localStorage.setItem(key, value);
   })
 }
 
+//user abe to render value when page is refreshed
 
+const grabItem = () => {
+  $('.time-block').each(function () {
+    const key = $(this).attr('id');
+    const value = $(this).localStorage.getItem(key);
 
+    $(this).children('textearea').val(value)
+  })
+}
 
+// call fxns here and interval set to update every second
 
 
 
@@ -98,13 +107,13 @@ const saveBtn  = () => {
   // const saveBtn = () => {
     // $('.btn').on('click', function () {
       // const key = $(this).parent().attr('id');
-      // const value = $(this).siblings('textarea').val(); // input from user
+      // const value = $(this).siblings('textarea').val();
 
       // localStorage.setItem(key, value);
     // })
   // }
 
-  //user abe to render value when page is refreshed
+  
   // const grabEvent = () => {
     // $('.time-block').each(function() {
       // const key = $(this).attr('id');
@@ -114,7 +123,7 @@ const saveBtn  = () => {
     // })
   // }
 
-  // call fxns here and interval set to update every second
+  
   // setInterval(colorCode, 1000);
   // setInterval(dtHeader, 1000);
   // saveBtn();
