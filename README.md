@@ -26,6 +26,13 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 ```
+## Deployed Application link
+https://rrciii.github.io/Schedule/
+
+## Screenshot
+
+C:\Users\rando\Schedule\Assets\05-third-party-apis-homework-demo.gif
+
 ## Citation
 
 Collegues at the UNC Bootcamp fullstack coding program.
