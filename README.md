@@ -31,7 +31,8 @@ https://rrciii.github.io/Schedule/
 
 ## Screenshot
 
-05-third-party-apis-homework-demo.gif
+![WorkSchdule_challenge_5-Screenshot](https://github.com/RRCIII/Schedule/assets/132403132/c0751466-4f37-45a9-8418-94e98a3c125d)
+
 
 ## Citation
 
