@@ -8,13 +8,19 @@ $(function () {
 //color coding time block to each element  
  const colorCode = () => {
   $('.time-block').each(function(){
-    const timeBlock = $(this).id;
+    const timeBlock = $(this).id;// 'this' keyword directs to the current element being iterated 
+  
+ 
+//conditional statement rendering color coding to represent present, future, and past depending on the current hr 
+  if(timeBlock === hr) {
+    $(this).removeClass('past future').addClass('present');
+    } else if (timeBlock > hr) {
+    $(this).removeClass('past present').addClass('future');
+    } else {
+    $(this).removeClass('present future').addClass('past');
+    }
   })
  }
-
-//conditional statement rendering color coding to represent present, future, and past depending on the current hr 
-
-
 
 
 
@@ -50,7 +56,7 @@ $(function () {
   
   // const colorCode = () => {
     // $('.time-block').each(function() {
-      // const timeBlock = this.id; // 'this' keyword directs to the current element being iterated 
+      // const timeBlock = this.id; 
       
       
       // if (timeBlock === hr) {
