@@ -22,6 +22,14 @@ $(function () {
   })
  }
 
+//display the current date/time to header of HTML
+const dtHeader = () => {
+  const currentDay = $('#currentDay');
+  const date = dayjs().format('ddd. MMMM D, YYYY');
+  const time = dayjs().format('hh:mm:ss a');
+
+  currentDay.text(`${date} | ${time}`);
+}
 
 
 
@@ -69,7 +77,7 @@ $(function () {
     // })
   // }
 
-  //display the current date/time to header of HTML
+  
   // const dtHeader = () => {
     // const currentDay = $('#currentDay');
     // const date = dayjs().format('ddd. MMMM D, YYYY');
