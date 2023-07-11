@@ -31,9 +31,16 @@ const dtHeader = () => {
   currentDay.text(`${date} | ${time}`);
 }
 
+// creating an eventListenter to 'save' local storage fxn, once 'save' is clicked 
 
+const saveBtn  = () => {
+  $('.btn').on('click', function (){
+      const key = $(this).parent().attr('id');
+      const value = $(this).siblings('textarea').val();
 
-
+      localStorage.setItem(key, value);
+  })
+}
 
 
 
@@ -87,7 +94,7 @@ const dtHeader = () => {
    
   // }
 
-  // creating an eventListenter to 'save' local storage fxn, once 'save' is clicked 
+  
   // const saveBtn = () => {
     // $('.btn').on('click', function () {
       // const key = $(this).parent().attr('id');
