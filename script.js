@@ -1,9 +1,18 @@
 //jQuery shorthand to ensure code is executed after the browser has finished rendering all elements in HTML
 
-$(function () {
+$(function () { 
+  
+//created current 24-hr clock time via dayjs()
  const hr = dayjs().format('HH');
 
+//color coding time block to each element  
+ const colorCode = () => {
+  $('.time-block').each(function(){
+    const timeBlock = $(this).id;
+  })
+ }
 
+//conditional statement rendering color coding to represent present, future, and past depending on the current hr 
 
 
 
@@ -35,15 +44,15 @@ $(function () {
 
 
 
-  //created current 24-hr clock time via dayjs()
+ 
   // const hr = dayjs().format('HH');
  
-  //color coding time block to each element 
+  
   // const colorCode = () => {
     // $('.time-block').each(function() {
       // const timeBlock = this.id; // 'this' keyword directs to the current element being iterated 
       
-      //conditional statement rendering color coding to represent present, future, and past depending on the current hr 
+      
       // if (timeBlock === hr) {
         // $(this).removeClass('past future').addClass('present');
       // } else if (timeBlock > hr) {
