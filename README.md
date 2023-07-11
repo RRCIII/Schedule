@@ -31,7 +31,7 @@ https://rrciii.github.io/Schedule/
 
 ## Screenshot
 
-C:\Users\rando\Schedule\Assets\05-third-party-apis-homework-demo.gif
+05-third-party-apis-homework-demo.gif
 
 ## Citation
 
