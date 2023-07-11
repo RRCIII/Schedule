@@ -1,5 +1,4 @@
 //jQuery shorthand to ensure code is executed after the browser has finished rendering all elements in HTML
-
 $(function () { 
   
 //created current 24-hr clock time via dayjs()
@@ -47,86 +46,18 @@ const saveBtn  = () => {
 const grabItem = () => {
   $('.time-block').each(function () {
     const key = $(this).attr('id');
-    const value = $(this).localStorage.getItem(key);
+    const value = localStorage.getItem(key);
 
-    $(this).children('textearea').val(value)
-  })
-}
+    $(this).children('textarea').val(value)
+    })
+  }
 
 // call fxns here and interval set to update every second
-
-
-
-
-
-
-
-
-
-
-
-
+setInterval(colorCode, 1000);
+setInterval(dtHeader, 1000);
+saveBtn();
+grabItem();
 
 });
-
-
-
-
-
-
- 
-  // const hr = dayjs().format('HH');
- 
-  
-  // const colorCode = () => {
-    // $('.time-block').each(function() {
-      // const timeBlock = this.id; 
-      
-      
-      // if (timeBlock === hr) {
-        // $(this).removeClass('past future').addClass('present');
-      // } else if (timeBlock > hr) {
-        // $(this).removeClass('past present').addClass('future');
-      // } else {
-        // $(this).removeClass('present future').addClass('past');
-      // }
-    // })
-  // }
-
-  
-  // const dtHeader = () => {
-    // const currentDay = $('#currentDay');
-    // const date = dayjs().format('ddd. MMMM D, YYYY');
-    // const time = dayjs().format('hh:mm:ss a');
-
-    // currentDay.text(`${date} | ${time}`);
-   
-  // }
-
-  
-  // const saveBtn = () => {
-    // $('.btn').on('click', function () {
-      // const key = $(this).parent().attr('id');
-      // const value = $(this).siblings('textarea').val();
-
-      // localStorage.setItem(key, value);
-    // })
-  // }
-
-  
-  // const grabEvent = () => {
-    // $('.time-block').each(function() {
-      // const key = $(this).attr('id');
-      // const value = localStorage.getItem(key);
-
-      // $(this).children('textarea').val(value);
-    // })
-  // }
-
-  
-  // setInterval(colorCode, 1000);
-  // setInterval(dtHeader, 1000);
-  // saveBtn();
-  // grabEvent();
 
 
